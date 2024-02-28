@@ -1,0 +1,9 @@
+<div th:fragment="search">
+    <form th:action="@{/bazaar/product}" class="input-group" method="get">
+        <input type="text" class="form-control" th:placeholder="${placeholder}" name="query" th:value="${query}" aria-label="Buscando producto..." aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary d-flex align-items-center" type="submit" id="button-addon2">
+            <span class="material-symbols-outlined">search</span>
+        </button>
+    </form>
+</div>
+

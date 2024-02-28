@@ -1,0 +1,56 @@
+<!-- entity-table-fragment.html -->
+<table class="my-3 table">
+    <thead class="table-dark">
+    <tr>
+        <th th:each="header : ${headers}" th:text="${header}"></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entity : ${entities}">
+        <td th:each="property : ${properties}" th:text="${entity[property]}"></td>
+        <td>
+            <div class="row justify-content-between">
+                <a th:href="@{__${entityPath}__/{id}/edit(id=${entity.id})}" class="col-md-4">
+                    <span class="material-symbols-outlined text-warning">edit</span>
+                </a>
+                <a href="#" onclick="deleteEntity(this)" class="col-md-4 btn btn-outline">
+                    <span class="material-symbols-outlined text-danger">delete</span>
+                </a>
+                <form th:action="@{__${entityPath}__/{id}/delete(id=${entity.id})}" method="post"></form>
+            </div>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+
+<!--<table class="my-3 table">-->
+<!--    <thead class="table-dark">-->
+<!--    <tr>-->
+<!--        <th th:each="theader : ${theaders}" th:text="${theader}"></th>-->
+<!--        <th></th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="product : ${products}">-->
+<!--        <td th:text="${product.id}"></td>-->
+<!--        <td th:text="${product.name}"></td>-->
+<!--        <td th:text="${product.description}"></td>-->
+<!--        <td th:text="${product.price}"></td>-->
+<!--        <td th:text="${product.stock}"></td>-->
+<!--        <td>-->
+<!--            <div class="row justify-content-between">-->
+<!--                <a th:href="@{/bazaar/product/{id}/edit(id=${product.id})}" class="col-md-4">-->
+<!--                    <span class="material-symbols-outlined text-warning">edit</span>-->
+<!--                </a>-->
+<!--                <a href="#" onclick="deleteProduct(this)" class="col-md-4 btn btn-outline">-->
+<!--                    <span class="material-symbols-outlined text-danger">delete</span>-->
+<!--                </a>-->
+<!--                <form th:action="@{/bazaar/product/{id}/delete(id=${product.id})}" method="post"></form>-->
+<!--            </div>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->

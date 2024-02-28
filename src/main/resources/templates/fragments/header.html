@@ -1,0 +1,45 @@
+<header>
+    <div class="px-3 py-2 text-bg-dark border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Logotipo_empresa.png" width="50" height="40" class="bi me-2" alt="logo">
+                    Bazaar
+                </a>
+
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a th:href="@{'/bazaar'}" class="nav-link text-white">
+                            <span class="material-symbols-outlined material-icon">home</span>
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <span class="material-symbols-outlined material-icon">speed</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{'/bazaar/client'}" class="nav-link text-white">
+                            <span class="material-symbols-outlined material-icon">person</span>
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{'/bazaar/product'}" class="nav-link text-white">
+                            <span class="material-symbols-outlined material-icon">inventory_2</span>
+                            Productos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <span class="material-symbols-outlined material-icon">point_of_sale</span>
+                            Ventas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
